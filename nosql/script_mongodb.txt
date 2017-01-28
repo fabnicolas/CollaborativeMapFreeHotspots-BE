@@ -81,32 +81,27 @@ db.wifi_networks.insert([
                             {
                                 utente: ObjectId("588bb1471c27f0e894a6d509"), // ID di finalgalaxy
                                 tipo: 1,
-                                dettagli: 'Errore: il range è limitato a 10 metri!',
-                                visualizzato: 0
+                                dettagli: 'Errore: il range è limitato a 10 metri!'
                             },
                             {
                                 utente: ObjectId("588bb1471c27f0e894a6d509"), // ID di finalgalaxy
                                 tipo: 2,
-                                dettagli: 'Errore: la rete non supporta 5ghz!',
-                                visualizzato: 0
+                                dettagli: 'Errore: la rete non supporta 5ghz!'
                             },
                             {
                                 utente: ObjectId("588bb2b51c27f0e894a6d50c"), // ID di james1
                                 tipo: 2,
-                                dettagli: 'La rete non supporta 5ghz...',
-                                visualizzato: 0
+                                dettagli: 'La rete non supporta 5ghz...'
                             },
                             {
                                 utente: ObjectId("588bb2cf1c27f0e894a6d50d"), // ID di rubinho
                                 tipo: 2,
-                                dettagli: 'La rete non supporta 5ghz, correggila!',
-                                visualizzato: 0
+                                dettagli: 'La rete non supporta 5ghz, correggila!'
                             },
                             {
                                 utente: ObjectId("588bb2e81c27f0e894a6d50f"), // ID di mathewalter2
                                 tipo: 2,
-                                dettagli: 'La rete prende solo a frequenza 2.4ghz...',
-                                visualizzato: 0
+                                dettagli: 'La rete prende solo a frequenza 2.4ghz...'
                             },
                             
                         ],
