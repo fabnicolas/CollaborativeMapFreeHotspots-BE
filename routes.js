@@ -9,6 +9,8 @@ var crypto = require('crypto');
 var config = require('./config');
 var mailer = require('./mailer');
 
+var mongoconnection = require('./mongoconnection');
+
 /*
 sha1 encoding
 
@@ -23,6 +25,20 @@ module.exports = {
     app.get('/', function(req, res) {
 		res.end('If you reach this endpoint, then Node.js is working! :D');
 	});
+
+    app.get('/testmongo/', function(req, res) {
+		mongoconnection.acquire(function (mongoose, mongomodels) {
+            mongomodels.User.find({email: "finalgalaxy@gmail.com"}, function(err, users) {
+                if(err){
+                    res.send({status: 1, message: err});
+                }else{
+                    res.send({status: 0, message: users});
+                }
+            });
+        });
+	});
+
+    
     
     //testato
     // Verifica dell'esistenza del token nel DB (usato dagli scripts di preload in caso di ?token=TOKEN_VALUE).

@@ -15,39 +15,39 @@
 db.wifi_networks.insert([
     {
        ssid: 'tp-link',
-       qualit‡: 4,
+       qualit√†: 4,
        latitudine: 40.775132,
        longitudine: 14.789021,
        restrizioni: 'Range di indirizzi IP limitato.\r\nBanda up/down inferiore alla media dei piani ADSL comuni.',
-       altre_informazioni: 'Velocit‡ media download: 1Mbit/s\r\nVelocit‡ media upload: 10Kb/s',
+       altre_informazioni: 'Velocit√† media download: 1Mbit/s\r\nVelocit√† media upload: 10Kb/s',
        range_wifi: 50,
        proprietario: ObjectId("588bb0f11c27f0e894a6d508") // ID di a.solda92
     },
     {
        ssid: 'Docenti',
-       qualit‡: 5,
+       qualit√†: 5,
        latitudine: 40.772143,
        longitudine: 14.788932,
-       necessit‡_login: 1,
+       necessit√†_login: 1,
        restrizioni: 'Traffico controllato dagli amministratori di rete.',
-       altre_informazioni: 'Velocit‡ media download: 5Mbit/s.\r\n\r\nPer il login alla rete pubblica sono richieste credenziali specifiche, contattare la segreteria.',
+       altre_informazioni: 'Velocit√† media download: 5Mbit/s.\r\n\r\nPer il login alla rete pubblica sono richieste credenziali specifiche, contattare la segreteria.',
        range_wifi: 750,
        proprietario: ObjectId("588bb0f11c27f0e894a6d508"), // ID di a.solda92
     },
     {
        ssid: 'Studenti',
-       qualit‡: 2,
+       qualit√†: 2,
        latitudine: 40.772221,
        longitudine: 14.790845,
-       necessit‡_login: 1,
+       necessit√†_login: 1,
        restrizioni: 'Traffico controllato dagli amministratori di rete.',
-       altre_informazioni: 'Velocit‡ media download: 3Mbit/s.\r\n\r\nLa rete ha un timeout di 2 minuti di inattivit‡.',
+       altre_informazioni: 'Velocit√† media download: 3Mbit/s.\r\n\r\nLa rete ha un timeout di 2 minuti di inattivit√†.',
        range_wifi: 750,
        proprietario: ObjectId("588bb0f11c27f0e894a6d508"), // ID di a.solda92
     },
     {
        ssid: 'TISCALI',
-       qualit‡: 4,
+       qualit√†: 4,
        latitudine: 40.773256,
        longitudine: 14.789099,
        numero_recensioni: 1,
@@ -64,7 +64,7 @@ db.wifi_networks.insert([
     },
     {
        ssid: 'linksys',
-       qualit‡: 4.5,
+       qualit√†: 4.5,
        latitudine: 40.773256,
        longitudine: 14.789099,
        numero_recensioni: 1,
@@ -81,7 +81,7 @@ db.wifi_networks.insert([
                             {
                                 utente: ObjectId("588bb1471c27f0e894a6d509"), // ID di finalgalaxy
                                 tipo: 1,
-                                dettagli: 'Errore: il range Ë limitato a 10 metri!'
+                                dettagli: 'Errore: il range √® limitato a 10 metri!'
                             },
                             {
                                 utente: ObjectId("588bb1471c27f0e894a6d509"), // ID di finalgalaxy
@@ -109,7 +109,7 @@ db.wifi_networks.insert([
     },
     {
        ssid: 'TISCALI',
-       qualit‡: 3,
+       qualit√†: 3,
        latitudine: 40.773163,
        longitudine: 14.788662,
        range_wifi: 30,
@@ -117,7 +117,7 @@ db.wifi_networks.insert([
     },
     {
        ssid: 'Vodafone-12345678',
-       qualit‡: 3,
+       qualit√†: 3,
        latitudine: 40.773163,
        longitudine: 14.788662,
        range_wifi: 30,
@@ -125,7 +125,7 @@ db.wifi_networks.insert([
     },
     {
        ssid: 'TISCALI',
-       qualit‡: 3,
+       qualit√†: 3,
        latitudine: 40.773163,
        longitudine: 14.788662,
        range_wifi: 30,

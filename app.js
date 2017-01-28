@@ -10,6 +10,7 @@ mailer.init();
 
 // Require also internal backend node scripts
 var connection = require('./connection'); // Note: exported 'class' Connection()
+var mongoconnection = require('./mongoconnection'); // Note: exported 'class' MongoConnection()
 var routes = require('./routes'); // Note: exported 'configure' function
  
 // Init express
@@ -33,6 +34,7 @@ app.use(allowCrossDomain);
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 connection.init(); // Init DB
+mongoconnection.init();
 routes.configure(app); // Give express to configure option for end-points configuration
 
 // Start the server
