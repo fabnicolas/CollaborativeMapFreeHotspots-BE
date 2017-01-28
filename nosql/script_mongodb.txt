@@ -1,0 +1,190 @@
+// In-line, riguardante la singola tabella utente
+/*db.users.insert([
+    {email: 'asolda92@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'},
+    {email: 'finalgalaxy@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'},
+    {email: 'cesaretucci95@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'},
+    {email: 'gianluca17@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'},
+    {email: 'james1@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'},
+    {email: 'rubinho@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'},
+    {email: 'vayumees@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'},
+    {email: 'mathewalter2@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'},
+    {email: 'amhad10@gmail.com', password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3');
+]);*/
+
+// Lista reti WiFi che possono subire valutazioni e segnalazioni da parte degli utenti
+db.wifi_networks.insert([
+    {
+       ssid: 'tp-link',
+       qualità: 4,
+       latitudine: 40.775132,
+       longitudine: 14.789021,
+       restrizioni: 'Range di indirizzi IP limitato.\r\nBanda up/down inferiore alla media dei piani ADSL comuni.',
+       altre_informazioni: 'Velocità media download: 1Mbit/s\r\nVelocità media upload: 10Kb/s',
+       range_wifi: 50,
+       proprietario: ObjectId("588bb0f11c27f0e894a6d508") // ID di a.solda92
+    },
+    {
+       ssid: 'Docenti',
+       qualità: 5,
+       latitudine: 40.772143,
+       longitudine: 14.788932,
+       necessità_login: 1,
+       restrizioni: 'Traffico controllato dagli amministratori di rete.',
+       altre_informazioni: 'Velocità media download: 5Mbit/s.\r\n\r\nPer il login alla rete pubblica sono richieste credenziali specifiche, contattare la segreteria.',
+       range_wifi: 750,
+       proprietario: ObjectId("588bb0f11c27f0e894a6d508"), // ID di a.solda92
+    },
+    {
+       ssid: 'Studenti',
+       qualità: 2,
+       latitudine: 40.772221,
+       longitudine: 14.790845,
+       necessità_login: 1,
+       restrizioni: 'Traffico controllato dagli amministratori di rete.',
+       altre_informazioni: 'Velocità media download: 3Mbit/s.\r\n\r\nLa rete ha un timeout di 2 minuti di inattività.',
+       range_wifi: 750,
+       proprietario: ObjectId("588bb0f11c27f0e894a6d508"), // ID di a.solda92
+    },
+    {
+       ssid: 'TISCALI',
+       qualità: 4,
+       latitudine: 40.773256,
+       longitudine: 14.789099,
+       numero_recensioni: 1,
+       recensioni:  [
+                        {
+                            utente: ObjectId("588bb1471c27f0e894a6d509"), // ID di finalgalaxy
+                            voto: 5
+                        }
+                    ],
+       restrizioni: 'Torrent non permessi.',
+       altre_informazioni: 'Operativa in media dalle 8:00 alle 20:00.',
+       range_wifi: 20,
+       proprietario: ObjectId("588bb2a51c27f0e894a6d50b"), // ID di gianluca17
+    },
+    {
+       ssid: 'linksys',
+       qualità: 4.5,
+       latitudine: 40.773256,
+       longitudine: 14.789099,
+       numero_recensioni: 1,
+       recensioni:  [
+                        {
+                            utente: ObjectId("588bb1471c27f0e894a6d509"), // ID di finalgalaxy
+                            voto: 5
+                        }
+                    ],
+       altre_informazioni: 'Supporta 5ghz.',
+       range_wifi: 20,
+       numero_segnalazioni: 5,
+       segnalazioni:    [
+                            {
+                                utente: ObjectId("588bb1471c27f0e894a6d509"), // ID di finalgalaxy
+                                tipo: 1,
+                                dettagli: 'Errore: il range è limitato a 10 metri!',
+                                visualizzato: 0
+                            },
+                            {
+                                utente: ObjectId("588bb1471c27f0e894a6d509"), // ID di finalgalaxy
+                                tipo: 2,
+                                dettagli: 'Errore: la rete non supporta 5ghz!',
+                                visualizzato: 0
+                            },
+                            {
+                                utente: ObjectId("588bb2b51c27f0e894a6d50c"), // ID di james1
+                                tipo: 2,
+                                dettagli: 'La rete non supporta 5ghz...',
+                                visualizzato: 0
+                            },
+                            {
+                                utente: ObjectId("588bb2cf1c27f0e894a6d50d"), // ID di rubinho
+                                tipo: 2,
+                                dettagli: 'La rete non supporta 5ghz, correggila!',
+                                visualizzato: 0
+                            },
+                            {
+                                utente: ObjectId("588bb2e81c27f0e894a6d50f"), // ID di mathewalter2
+                                tipo: 2,
+                                dettagli: 'La rete prende solo a frequenza 2.4ghz...',
+                                visualizzato: 0
+                            },
+                            
+                        ],
+       proprietario: ObjectId("588bb2a51c27f0e894a6d50b"), // ID di gianluca17
+    },
+    {
+       ssid: 'TISCALI',
+       qualità: 3,
+       latitudine: 40.773163,
+       longitudine: 14.788662,
+       range_wifi: 30,
+       proprietario: ObjectId("588bb2b51c27f0e894a6d50c") // ID di james1
+    },
+    {
+       ssid: 'Vodafone-12345678',
+       qualità: 3,
+       latitudine: 40.773163,
+       longitudine: 14.788662,
+       range_wifi: 30,
+       proprietario: ObjectId("588bb2b51c27f0e894a6d50c") // ID di james1
+    },
+    {
+       ssid: 'TISCALI',
+       qualità: 3,
+       latitudine: 40.773163,
+       longitudine: 14.788662,
+       range_wifi: 30,
+       proprietario: ObjectId("588bb2b51c27f0e894a6d50c") // ID di james1
+    }
+]);
+
+// Lista utenti, in cui verranno aggiunti dinamicamente token e sessione
+db.users.insert([
+    {
+        _id: ObjectId("588bb0f11c27f0e894a6d508"),
+        email: 'a.solda92@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    },
+    {
+        _id: ObjectId("588bb1471c27f0e894a6d509"),
+        email: 'finalgalaxy@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    },
+    {
+        _id: ObjectId("588bb27f1c27f0e894a6d50a"),
+        email: 'cesaretucci95@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    },
+    {
+        _id: ObjectId("588bb2a51c27f0e894a6d50b"),
+        email: 'gianluca17@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    },
+    {
+        _id: ObjectId("588bb2b51c27f0e894a6d50c"),
+        email: 'james1@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    },
+    {
+        _id: ObjectId("588bb2cf1c27f0e894a6d50d"),
+        email: 'rubinho@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    },
+    {
+        _id: ObjectId("588bb2db1c27f0e894a6d50e"),
+        email: 'vayumees@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    },
+    {
+        _id: ObjectId("588bb2e81c27f0e894a6d50f"),
+        email: 'mathewalter2@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    },
+    {
+        _id: ObjectId("588bb2fe1c27f0e894a6d510"),
+        email: 'amhad10@gmail.com',
+        password: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'
+    }
+]);
+
+
