@@ -6,7 +6,7 @@ CollaborativeMapFreeHotspots &gt;alwaysconnected&lt; is a web application projec
 
 Project group (v1.0):
 - Andrea Soldà (Project Manager); https://github.com/asolda/
-- Fabio Crispino (Full stack, backend-priority); https://github.com/Finalgalaxy/
+- Fabio Crispino (Full stack, backend-priority); https://github.com/fabnicolas/
 - Marta Benedetta Celiento (Middleware); https://github.com/martaceliento/
 - Mattia Rosselli (Testing backend); https://github.com/Matioski/
 - Davide Vegliante (Frontend); https://github.com/davidevegliante
